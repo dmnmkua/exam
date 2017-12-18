@@ -1,0 +1,333 @@
+.second-section {
+  padding: 0 168px 100px;
+  background: #fff url(../img/Logo.png) no-repeat center 30%;;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  @media screen and (max-width: 1400px) {
+    padding: 0 30px 100px;
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    padding: 20px 0 100px;
+  }
+}
+
+// .card__wrap {
+//   position: relative;
+//   width: 33%;
+//
+//   @media screen and (max-width: 600px) {
+//     width: 100%;
+//   }
+// }
+
+.card {
+  width: 33%;
+  height: 850px;
+  bottom: 0;
+  left: 0;
+  transition: .3s linear;
+  position: relative;
+  // transform: translateY(-125px);
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media screen and (max-width: 1000px) {
+    transform: translateY(-50px);
+  }
+
+  @media screen and (max-width: 600px) {
+    transform: none;
+    width: 100%;
+    height: 750px;
+  }
+}
+
+.card:hover {
+  z-index: 1;
+}
+
+.card:not(:last-child) {
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 150px;
+  }
+}
+
+.card__header {
+  padding: 0 120px;
+  height: 288px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 65px 0px rgba(213, 213, 213, 0.35);
+  border-bottom: 5px solid transparent;
+  border-image: linear-gradient(to right, #aae238 , #2bd39b) 1 100%;
+  border-image-slice: 1;
+  transition: .3s linear, background 0s;
+  will-change: padding;
+  position: absolute;
+  top: -125px;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+
+  @media screen and (max-width: 1700px) {
+    padding: 0 80px;
+  }
+
+  @media screen and (max-width: 1450px) {
+    padding: 0 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 0 15px;
+  }
+
+  @media screen and (max-width: 600px) {
+    top: -75px;
+  }
+}
+
+.card:hover .card__header {
+  transform: scale(1.1);
+  border-image: none;
+
+  @media screen and (max-width: 600px) {
+    transform: none;
+  }
+}
+
+.card__header--first {
+  background: #fff url(../img/Icon-1.png) no-repeat center center;
+  background-size: cover;
+
+  @media screen and (max-width: 600px) {
+    background: #fff;
+  }
+}
+.card__header--second {
+  background: #fff url(../img/Logo.png) no-repeat center center;
+  background-size: cover;
+
+  @media screen and (max-width: 600px) {
+    background: #fff;
+  }
+}
+.card__header--third {
+  background: #fff url(../img/Icon-2.png) no-repeat center center;
+  background-size: cover;
+
+  @media screen and (max-width: 600px) {
+    background: #fff;
+  }
+}
+
+.card:hover .card__header--first,
+.card:hover .card__header--second,
+.card:hover .card__header--third {
+  background: #fff;
+}
+
+.card__header-img {
+  display: block;
+  margin: 0;
+  height: 0;
+  transition: .5s;
+  opacity: 0;
+
+  @media screen and (max-width: 600px) {
+    height: auto;
+    opacity: 1;
+    margin-bottom: 30px;
+  }
+}
+
+.card:hover .card__header-img {
+  height: 90px;
+  margin: 0;
+  opacity: 1;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 600px) {
+    height: auto;
+    opacity: 1;
+    margin-bottom: 30px;
+  }
+}
+
+.card__header-title {
+  font-size: 1.5rem;
+  color: #2d3b3e;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 11px;
+}
+
+.card__header-under-title {
+  font-size: 1.125rem;
+  color: #8fa3aa;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+.card__btn {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: -26px;
+  transform: translateX(-50%);
+  transition: .3s linear;
+
+  @media screen and (max-width: 600px) {
+    display: block;
+  }
+}
+
+.card:hover .card__btn {
+  display: block;
+}
+
+.card__btn:hover {
+  color: #2d3b3e;
+  background: #fff;
+}
+
+.card__body {
+  position: absolute;
+  top: 30%;
+}
+
+.card:hover .card__body {
+  height: 231px;
+
+  @media screen and (max-width: 600px) {
+    height: 200px;
+  }
+}
+
+.card__body-descr {
+  height: 0;
+  opacity: 0;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: #2d3b3e;
+  text-align: center;
+  transition: .5s;
+
+  @media screen and (max-width: 600px) {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+.card:hover .card__body-descr {
+  height: auto;
+  opacity: 1;
+}
+
+.card__footer {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 20px 120px;
+  border-radius: 15px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @media screen and (max-width: 1700px) {
+    padding: 0 80px 50px;
+  }
+
+  @media screen and (max-width: 1450px) {
+    padding: 0 30px 50px;
+  }
+
+  @media screen and (max-width: 600px) {
+    box-shadow: 0px 0px 65px 0px rgba(213, 213, 213, 0.35);
+    padding: 20px 30px 50px;
+  }
+}
+
+.card:hover .card__footer {
+  box-shadow: 0px 0px 65px 0px rgba(213, 213, 213, 0.35);
+  padding: 45px 120px 58px;
+  transform: translateY(30px) scale(1.05);
+
+  @media screen and (max-width: 1700px) {
+    padding: 45px 80px 58px;
+  }
+
+  @media screen and (max-width: 1450px) {
+    padding: 45px 30px 58px;
+  }
+
+  @media screen and (max-width: 600px) {
+    transform: none;
+    padding: 20px 30px 50px;
+  }
+}
+
+.card__footer-title {
+  color: #2d3b3e;
+  font-family: "Proxima Nova Bold", sans-serif;
+  font-weight: 700;
+  font-size: 1.875rem;
+  margin: 50px 0 27px;
+  text-align: center;
+}
+
+.card__footer-under-title {
+  color: #8fa3aa;
+  font-size: 1.125rem;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+.card__footer-link {
+  opacity: 0;
+  height: 0;
+  transition: .3s linear;
+  font-family: 'Proxima Nova Regular', sans-serif;
+  font-weight: 400;
+  color: #2cd39a;
+  font-size: 1.125rem;
+
+  @media screen and (max-width: 600px) {
+    opacity: 1;
+    height: auto;
+    margin-top: 45px;
+  }
+}
+
+.card:hover .card__footer-link {
+  margin-top: 45px;
+  opacity: 1;
+  height: auto;
+}

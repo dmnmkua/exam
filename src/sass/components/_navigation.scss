@@ -1,0 +1,144 @@
+.nav {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+  @media screen and (max-width: 1700px) {
+    order: 1;
+    align-content: flex-start;
+    width: 100%;
+    margin-top: 50px;
+    justify-content: flex-end;
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: auto;
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    
+  }
+}
+
+.nav__btn {
+  background: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: none;
+
+  @media screen and (max-width: 1000px) {
+    display: block;
+  }
+}
+
+.nav__btn-icon {
+
+}
+
+.nav__list {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    padding: 30px 50px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    transition: .3s;
+    will-change: transform;
+    transform: translateX(100%);
+  }
+}
+
+.nav__list--show {
+  transform: translateX(0);
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 40px;
+
+  @media screen and (max-width: 1000px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.nav__item--log {
+  display: none;
+
+  @media screen and (max-width: 1000px) {
+    display: block;
+  }
+}
+
+.nav__link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Proxima Nova Regular", sans-serif;
+  transition: .3s;
+  will-change: color;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 0;
+    height: 1px;
+    background: #2cd39a;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transition: .3s;
+  }
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 1px;
+    background: #2cd39a;
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+    transition: .3s;
+  }
+
+  &:hover {
+    color: #2cd39a;
+
+    &:before {
+      content: '';
+      width: 50%;
+    }
+
+    &:after {
+      content: '';
+      width: 50%;
+    }
+  }
+}

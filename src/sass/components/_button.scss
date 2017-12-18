@@ -1,0 +1,37 @@
+.btn {
+  width: 156px;
+  height: 51px;
+  border-radius: 25px;
+  border: none;
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: .875rem;
+  color: #fff;
+  cursor: pointer;
+  transition: .1s;
+  will-change: box-shadow;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+
+  &:before {
+    content: '';
+    background: linear-gradient(to right, #aae238 , #2bd39b);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+    z-index: -5;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .1);
+
+    &:before {
+      bottom: -100%;
+    }
+  }
+}
