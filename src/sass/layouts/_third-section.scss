@@ -14,8 +14,7 @@
     padding: 0 30px;
   }
 
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
+  @media screen and (max-width: 650px) {
     padding: 0;
   }
 }
@@ -30,6 +29,15 @@
   margin: 40px 0;
   padding: 0;
   width: 100%;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+}
+
+.third-section-nav__item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .third-section-nav__link {
@@ -108,6 +116,10 @@
   align-items: center;
   justify-content: center;
   position: relative;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 }
 
 .slider-left {
@@ -123,6 +135,10 @@
   padding: 0;
   margin: 0;
   position: relative;
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
 }
 
 .slider__btn {
@@ -163,6 +179,17 @@
   &:hover {
     transform: translate(50%, -50%) rotate(45deg) scale(1.1);
   }
+
+  @media screen and (max-width: 900px) {
+    top: auto;
+    right: 50%;
+    bottom: 0;
+    transform: translate(50%, 50%) rotate(135deg);
+
+    &:hover {
+      transform: translate(50%, 50%) rotate(135deg) scale(1.1);
+    }
+  }
 }
 
 .slider-right__btn {
@@ -178,6 +205,18 @@
   &:hover {
     transform: translate(-50%, -50%) rotate(45deg) scale(1.1);
   }
+
+  @media screen and (max-width: 900px) {
+    top: 0;
+    right: auto;
+    left: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%) rotate(135deg);
+
+    &:hover {
+      transform: translate(-50%, -50%) rotate(135deg) scale(1.1);
+    }
+  }
 }
 
 .slider-left__item {
@@ -192,7 +231,7 @@
   margin: 0;
   width: 100%;
   height: 100%;
-  background: url(../img/Box-1.png) no-repeat center center;
+  background: url(../img/Box-1.png) no-repeat top center;
   background-size: cover;
   transition: 1s ease-in-out;
   color: #fff;
@@ -218,6 +257,10 @@
   margin: 0;
   overflow: hidden;
   position: relative;
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
 }
 
 .slider-right__item {
@@ -241,10 +284,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
-  @media screen and (max-width: 1650px) {
-    
-  }
 }
 
 .slider-right__title {
@@ -253,6 +292,14 @@
   font-family: 'Proxima Nova Bold', sans-serif;
   font-weight: 700;
   margin: 0;
+
+  @media screen and (max-width: 900px) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 2.5rem;
+  }
 }
 
 .slider-right__under-title {
@@ -261,6 +308,15 @@
   font-family: 'Proxima Nova Light', sans-serif;
   font-weight: 300;
   margin: 25px 0;
+
+  @media screen and (max-width: 900px) {
+    font-size: 1.125rem;
+    margin: 15px 0;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 1rem;
+  }
 }
 
 .btn--slider-right {
