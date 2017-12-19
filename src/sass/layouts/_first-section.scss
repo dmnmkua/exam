@@ -137,7 +137,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border: 2px solid #2cd39a;
+  // border: 2px solid #2cd39a;
   flex-shrink: 0;
   margin-left: 20px;
 
@@ -146,14 +146,21 @@
   }
 }
 
-.first-section__count {
+.svg {
+  width: 150px;
+  height: 150px;
+  transition: .3s;
+}
+
+.svg text {
   font-size: 1.5rem;
-  color: #fff;
+  fill: #fff;
   font-family: 'Proxima Nova Light', sans-serif;
   font-weight: 300;
 }
 
-.first-section__count span {
-  color: #2cd39a;
+.svg text tspan {
+  fill: #2cd39a;
   font-size: 3rem;
+  transition: .3s;
 }

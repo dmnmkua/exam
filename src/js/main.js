@@ -8,12 +8,19 @@ function init() {
     this.sliderList = document.querySelector('.slider__list');
     this.blockCount = document.querySelector('.first-section__count');
     this.count = 0;
+    this.timeChangeBackground = 5000;
     this.imgArr = [
       'img/Photo-1.png',
       'img/Photo-2.png',
       'img/Photo-3.png',
       'img/Photo-4.png',
     ]
+
+    // Переменные svg
+    this.line = document.querySelector('.svg circle');
+    this.text = document.querySelector('.svg text');
+    this.radius = this.line.getAttribute('r');
+    this.lineLength = 2 * this.radius * Math.PI;
 
     //   Создаем динамически элементы списка (слайдера)
     for(let i = 0; i < this.imgArr.length; i++) {
@@ -30,12 +37,23 @@ function init() {
 
     //  функция вывода счетчика на страницу
     this._count = () => {
-      this.blockCount.innerHTML = (`<span>${(this.count % this.sliderItem.length) + 1}</span>/${this.sliderItem.length}`);
+      this.text.innerHTML = (`<tspan>${(this.count % this.sliderItem.length) + 1}</tspan>/${this.sliderItem.length}`);
+    }
+
+    //  функция круга прогресс бара
+    this._progress = (parts) => {
+      this.line.setAttribute('stroke-dashoffset', `${this.lineLength / 4}`);
+      for(let i = 0; i <= parts; i++) {
+        setTimeout(() => {
+          this.line.setAttribute('stroke-dasharray', `${this.lineLength / parts * i} ${this.lineLength - this.lineLength / parts * i}`);
+        }, this.timeChangeBackground / parts * i);
+      }
     }
 
     //  Интервал вывода счетчика на страницу
-    this._slideInterval = () => {
+    this._slideInterval = (sec) => {
       setInterval( () => {
+        this._progress(300);
         this.sliderItem[this.count % this.sliderItem.length].style.opacity = `0`;
 
         this.count++;
@@ -43,11 +61,12 @@ function init() {
         this.sliderItem[this.count % this.sliderItem.length].style.opacity = `1`;
 
         this._count();
-      }, 5000);
+      }, this.timeChangeBackground);
     };
 
     this._init = () => {
       this._count();
+      this._progress(300);
       this._slideInterval();
     }
 
