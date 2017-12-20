@@ -175,7 +175,7 @@
 }
 
 .soc--fb {
-	background: #3f4999;
+	background: #3b5997;
 }
 
 .soc--tw {
@@ -271,6 +271,12 @@
 	font-size: .874rem;
 	font-family: 'Proxima Nova Regular', sans-serif;
 	font-weight: 400;
+	cursor: pointer;
+	transition: .3;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 .about__item:not(:last-child) {
