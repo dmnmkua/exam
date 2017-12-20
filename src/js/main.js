@@ -40,7 +40,7 @@ function init() {
       this.text.innerHTML = (`<tspan>${(this.count % this.sliderItem.length) + 1}</tspan>/${this.sliderItem.length}`);
     }
 
-    //  функция круга прогресс бара
+    //  функция заполнение круга прогресс бара
     this._progress = (parts) => {
       this.line.setAttribute('stroke-dashoffset', `${this.lineLength / 4}`);
       for(let i = 0; i <= parts; i++) {

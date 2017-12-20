@@ -94,7 +94,11 @@
         <div class="first-section__block-count">
           <!-- <img src="./img/Slider.png" alt="slider"> -->
           <svg class="svg">
-            <circle cx='75' cy='75' r='72' stroke='#2cd39a' stroke-width='3' fill='none' />
+            <linearGradient id="color">
+              <stop offset="0%" stop-color="#aae238"/>
+              <stop offset="100%" stop-color="#2bd39b"/>
+            </linearGradient>
+            <circle cx='75' cy='75' r='72' stroke='url(#color)' stroke-width='3' fill='none' />
             <text text-anchor='middle' x='75' y='88'>
 
             </text>
