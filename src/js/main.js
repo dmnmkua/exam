@@ -13,7 +13,7 @@ function init() {
       'img/Photo-1.png',
       'img/Photo-2.png',
       'img/Photo-3.png',
-      'img/Photo-4.png',
+      'img/Photo-4.jpg',
     ]
 
     // Переменные svg
