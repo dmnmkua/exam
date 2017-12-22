@@ -80,6 +80,7 @@ class SliderTop {
       this.sliderList.appendChild(this.sliderItemCr);
     };
   };
+  
 
   //  функция вывода счетчика на страницу
   _count() {
