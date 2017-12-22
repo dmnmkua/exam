@@ -32,23 +32,23 @@
 }
 
 .preloader__anim-item--1 {
-  animation: 7s anim infinite;
+  animation: 4s anim infinite;
 }
 
 .preloader__anim-item--2 {
-  animation: 7s anim 1s infinite;
+  animation: 4s anim .5s infinite;
 }
 
 .preloader__anim-item--3 {
-  animation: 7s anim 2s infinite;
+  animation: 4s anim 1s infinite;
 }
 
 .preloader__anim-item--4 {
-  animation: 7s anim 3s infinite;
+  animation: 4s anim 1.5s infinite;
 }
 
 .preloader__anim-item--5 {
-  animation: 7s anim 4s infinite;
+  animation: 4s anim 2s infinite;
 }
 
 @keyframes anim {
