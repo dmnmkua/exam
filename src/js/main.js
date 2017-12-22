@@ -65,7 +65,7 @@ class SliderTop {
     this._count();
 
     // Запускаем прогресс бар разбитый на 300 частей
-    this._progress(300);
+    this._progress(60);
 
     //  Запускаем бэкграунд слайдер
     this._slideInterval();
@@ -99,7 +99,7 @@ class SliderTop {
   //  Интервал вывода счетчика на страницу
   _slideInterval(sec) {
     setInterval( () => {
-      this._progress(300);
+      this._progress(60);
       this.sliderItem[this.count % this.sliderItem.length].style.opacity = `0`;
 
       this.count++;
