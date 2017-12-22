@@ -65,7 +65,7 @@ class SliderTop {
     this._count();
 
     // Запускаем прогресс бар разбитый на 300 частей
-    this._progress(60);
+    // this._progress(60);
 
     //  Запускаем бэкграунд слайдер
     this._slideInterval();
@@ -87,19 +87,19 @@ class SliderTop {
   }  
 
   //  функция заполнение круга прогресс бара
-  _progress(parts) {
-    this.line.setAttribute('stroke-dashoffset', `${this.lineLength / 4}`);
-    for(let i = 0; i <= parts; i++) {
-      setTimeout(() => {
-        this.line.setAttribute('stroke-dasharray', `${this.lineLength / parts * i} ${this.lineLength - this.lineLength / parts * i}`);
-      }, this.timeChangeBackground / parts * i);
-    }
-  }
+  // _progress(parts) {
+  //   this.line.setAttribute('stroke-dashoffset', `${this.lineLength / 4}`);
+  //   for(let i = 0; i <= parts; i++) {
+  //     setTimeout(() => {
+  //       this.line.setAttribute('stroke-dasharray', `${this.lineLength / parts * i} ${this.lineLength - this.lineLength / parts * i}`);
+  //     }, this.timeChangeBackground / parts * i);
+  //   }
+  // }
 
   //  Интервал вывода счетчика на страницу
   _slideInterval(sec) {
     setInterval( () => {
-      this._progress(60);
+      // this._progress(60);
       this.sliderItem[this.count % this.sliderItem.length].style.opacity = `0`;
 
       this.count++;
