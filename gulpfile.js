@@ -1,13 +1,17 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const browserSync = require('browser-sync');
+const browserSync = require('browser-sync').create();
 const csso = require('gulp-csso');
 const rename = require('gulp-rename');
 const del = require('del');
 const plumber = require('gulp-plumber');
+const babelify = require('babelify');
+const browserify = require('gulp-browserify');
+const watch = require('gulp-watch');
+const babel = require('gulp-babel');
 
 gulp.task('browser-sync', () => {
-  browserSync({
+  browserSync.init({
     server: {
       baseDir: 'src'
     },
@@ -24,13 +28,32 @@ gulp.task('css', () => {
       suffix: ".min"
     }))
     .pipe(gulp.dest('src/css'))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.stream())
+});
+
+gulp.task('js', () => {
+  return gulp.src('src/js/main.js')
+    .pipe(plumber())
+    // .pipe(browserify({
+    //     debug: true,
+    //     transform: [babelify.configure({
+    //       presets: ['es2015']
+    //     })]
+    //   }))
+    .pipe(babel({
+      presets: ['env']
+    }))
+    .pipe(rename({
+      suffix: ".prod"
+    }))
+    .pipe(gulp.dest('src/js'))
+    .pipe(browserSync.stream())
 });
 
 gulp.task('watch', ['browser-sync'], () => {
   gulp.watch('src/sass/**/*.scss', ['css']);
-  gulp.watch('src/index.html', browserSync.reload)
-  gulp.watch('src/js/**/*.js', browserSync.reload);
+  gulp.watch('src/index.html').on('change', browserSync.reload);
+  gulp.watch('src/js/**/*.js', ['js']);
 })
 
 gulp.task('default', ['watch']);

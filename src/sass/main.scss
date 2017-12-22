@@ -1,7 +1,10 @@
+@import "./components/preloader";
+
 //  FONTS
 
 // Font Awesome
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+// @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import '../libs/fontawesome/font-awesome.min';
 
 // Font Proxima Nova
 @import "../fonts/proxima-nova/stylesheet";
@@ -14,6 +17,7 @@
 //  COMPONENTS
 @import "./components/button";
 @import "./components/navigation";
+@import './components/form';
 
 //  LAYOUTS
 
