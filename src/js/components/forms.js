@@ -10,6 +10,8 @@ export default class Form {
     this.input = document.querySelectorAll('.input');
     this.inputText = document.querySelectorAll('.input-text');
     this.overlay = document.querySelector('.overlay');
+		this.closeSignIn = document.querySelector('#close__sign-in');
+		this.closeSignUp = document.querySelector('#close__sign-up');
 
 
     this._events();
@@ -46,6 +48,18 @@ export default class Form {
         this.formSignUp.classList.remove('form--sign-up-show');
       };
     });
+
+		this.closeSignIn.addEventListener('click', e => {
+			e.preventDefault();
+			this.formSignIn.classList.remove('form--sign-in-show');
+			this.overlay.classList.remove('overlay--show');
+		});
+
+		this.closeSignUp.addEventListener('click', e => {
+			e.preventDefault();
+			this.formSignUp.classList.remove('form--sign-up-show');
+			this.overlay.classList.remove('overlay--show');
+		});
 
     for(let i = 0; i < this.input.length; i++) {
       //  Если поле в фокусе, плейсхолдер уходит вверх

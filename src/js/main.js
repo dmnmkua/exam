@@ -9,6 +9,7 @@ function preloader() {
   preloader.classList.add('preloader--hide');
 }
 
+
 //  Import classes from components
 import BtnSearch from './components/btnSearch';
 import Form from './components/forms';

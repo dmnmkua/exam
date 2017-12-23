@@ -41,10 +41,6 @@ gulp.task('js', () => {
           presets: ['es2015']
         })]
       }))
-    .pipe(babel({
-      presets: ['env']
-    }))
-    .pipe(uglify())
     .pipe(rename({
       suffix: ".prod"
     }))
@@ -77,6 +73,10 @@ gulp.task('build', ['css'], () => {
     .pipe(gulp.dest('dist/img'))
 
   const bJs = gulp.src('src/js/main.prod.js')
+    .pipe(babel({
+      presets: ['env']
+    }))
+    .pipe(uglify())
     .pipe(gulp.dest('dist/js'))
 
   const bHtml = gulp.src('src/index.html')
