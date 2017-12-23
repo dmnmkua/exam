@@ -24,7 +24,8 @@ export default class Form {
         this.overlay.classList.add('overlay--show');
       });
 
-      this.navLinkSignIn.addEventListener('click', () => {
+      this.navLinkSignIn.addEventListener('click', e => {
+				e.preventDefault();
         this.formSignIn.classList.add('form--sign-in-show');
         this.overlay.classList.add('overlay--show');
       });
@@ -34,7 +35,8 @@ export default class Form {
         this.overlay.classList.add('overlay--show');
       });
 
-      this.navLinkSignUp.addEventListener('click', () => {
+      this.navLinkSignUp.addEventListener('click', e => {
+				e.preventDefault();
         this.formSignUp.classList.add('form--sign-up-show');
         this.overlay.classList.add('overlay--show');
       });
