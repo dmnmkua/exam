@@ -2,14 +2,14 @@
 export default class SliderSecond {
 
   constructor() {
-    // values 
+    // values
     this.btnPrev = document.querySelector('.slider-left__btn');
     this.btnNext = document.querySelector('.slider-right__btn');
     this.leftSliderItem = document.querySelectorAll('.slider-left__item');
     this.rightSliderItem = document.querySelectorAll('.slider-right__item');
     this.navList = document.querySelector('.third-section-nav__list');
     this.navItem = document.querySelectorAll('.third-section-nav__item');
-    this.count = 0;      
+    this.count = 0;
 
     //  Запускаем функцию слайдера
     this._toggleSlider();
@@ -17,7 +17,7 @@ export default class SliderSecond {
     //  События
     this._events();
   }
-  
+
 
   _toggleSlider() {
     //  Удаляем активный класс у всех ссылок
@@ -53,7 +53,7 @@ export default class SliderSecond {
     //  Перемещение по слайдеру кнопками меню
     this.navList.addEventListener('click', e => {
       if(e.target.tagName === 'A') {
-        event.preventDefault();
+        e.preventDefault();
         for(let i = 0; i < this.navItem.length; i++) {
           if(e.target.parentNode === this.navItem[i]) {
             this.count = i;
@@ -64,4 +64,3 @@ export default class SliderSecond {
     });
   };
 }
-  
