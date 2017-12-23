@@ -81,8 +81,8 @@ gulp.task('build', ['clean', 'css'], () => {
       presets: ['env']
     }))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('dist/js'));
 
   const bHtml = gulp.src('src/index.html')
     .pipe(gulp.dest('dist'))
-})
+});
