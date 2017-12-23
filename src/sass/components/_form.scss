@@ -1,6 +1,6 @@
 .form {
 	position: fixed;
-	top: 50%;
+	// top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background: #fff;
@@ -18,12 +18,12 @@
 
 .form--sign-in,
 .form--sign-up {
-	transform: translate(-50%, -1000px);
+	top: -100%;
 }
 
 .form--sign-in-show,
 .form--sign-up-show {
-	transform: translate(-50%, -50%);
+	top: 50%;;
 }
 
 .login-wrap,
