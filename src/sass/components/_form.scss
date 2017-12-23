@@ -78,6 +78,7 @@
 	color: #2d3b3e;
 }
 
+
 .close {
 	display: -webkit-flex;
 	display: -ms-flex;
@@ -93,6 +94,6 @@
 	border-radius: 50%;
 	border: 1px solid rgba(44, 211, 154, .3);
 	color: #fff;
-	background: rgb(44, 211, 154);
+	background: linear-gradient(to right, rgb(170, 226, 56), rgb(43, 211, 155));
 	cursor: pointer;
 }
