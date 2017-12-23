@@ -35,12 +35,12 @@ gulp.task('css', () => {
 gulp.task('js', () => {
   return gulp.src('src/js/main.js')
     .pipe(plumber())
-    // .pipe(browserify({
-    //     debug: true,
-    //     transform: [babelify.configure({
-    //       presets: ['es2015']
-    //     })]
-    //   }))
+    .pipe(browserify({
+        debug: true,
+        transform: [babelify.configure({
+          presets: ['es2015']
+        })]
+      }))
     .pipe(babel({
       presets: ['env']
     }))
@@ -60,10 +60,10 @@ gulp.task('watch', ['browser-sync'], () => {
 
 gulp.task('default', ['watch']);
 
-gulp.task('buildCss', ['css'], () => {
-  return gulp.src('src/main.css')
-    .pipe(plumber())
-})
+// gulp.task('buildCss', ['css'], () => {
+//   return gulp.src('src/main.css')
+//     .pipe(plumber())
+// })
 
 gulp.task('build', ['css'], () => {
   const bCss = gulp.src('main.min.css')
@@ -76,10 +76,7 @@ gulp.task('build', ['css'], () => {
   const bImg = gulp.src('src/img/**/*')
     .pipe(gulp.dest('dist/img'))
 
-  const bJs = gulp.src('src/js/**/*')
-    .pipe(babel({
-      presets: ['env']
-    }))
+  const bJs = gulp.src('src/js/main.prod.js')
     .pipe(gulp.dest('dist/js'))
 
   const bHtml = gulp.src('src/index.html')

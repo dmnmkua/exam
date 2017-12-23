@@ -1,16 +1,16 @@
 //  Конструктор открытия меню
 export default class Menu {
 
-	constructor() {
+  constructor() {
 
-		// values DOM
-		this.menuBtn = document.querySelector('.nav__btn');
+    // values DOM
+    this.menuBtn = document.querySelector('.nav__btn');
     this.menuList = document.querySelector('.nav__list');
     this.overlay = document.querySelector('.overlay');
 
-    //	events
+    //  events
     this._events();
-	}
+  }
 
   _events() {
     // Открытие меню по клику на кнопку меню
@@ -27,10 +27,14 @@ export default class Menu {
 
     // Скрытие меню и оверфлоу по клику на пункт меню
     this.menuList.addEventListener('click', e => {
-      if(e.target.tagName === 'A') {
+      if(e.target.tagName === 'A' && e.target.classList.contains('nav__link--trs')) {
         this.menuList.classList.remove('nav__list--show');
         this.overlay.classList.remove('overlay--show');
       };
+      if(e.target.tagName === 'A' && (e.target.classList.contains('nav__link--sign-in') || e.target.classList.contains('nav__link--sign-up'))) {
+        this.menuList.classList.remove('nav__list--show');
+      };
+
     });
   };
 };
