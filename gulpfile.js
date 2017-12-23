@@ -61,8 +61,12 @@ gulp.task('default', ['watch']);
 //     .pipe(plumber())
 // })
 
-gulp.task('build', ['css'], () => {
-  const bCss = gulp.src('main.min.css')
+gulp.task('clean', () => {
+    return del.sync('dist'); // Удаляем папку dist перед сборкой
+});
+
+gulp.task('build', ['clean', 'css'], () => {
+  const bCss = gulp.src('src/css/main.min.css')
     .pipe(plumber())
     .pipe(gulp.dest('dist/css'))
 

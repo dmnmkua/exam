@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Westa Bank</title>
+  <link rel="shortcut icon" href="/img/Sign.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="css/main.min.css">
+</head>
+<body>
+
+  <div class="preloader">
+    <div class="preloader__anim">
+      <div class="preloader__anim-item preloader__anim-item--1"></div>
+      <div class="preloader__anim-item preloader__anim-item--2"></div>
+      <div class="preloader__anim-item preloader__anim-item--3"></div>
+      <div class="preloader__anim-item preloader__anim-item--4"></div>
+      <div class="preloader__anim-item preloader__anim-item--5"></div>
+    </div>
+  </div>
+
+  <!-- wrapper -->
+  <div class="wrapper">
+
+    <!-- overlay   -->
+    <div class="overlay"></div> <!-- overlay   -->
+
+    <!-- form sign-in -->
+    <form class="form form--sign-in">
+      <div class="login-wrap">
+        <input type="text" name="login" class="login input">
+        <span class="login-text input-text">Login</span>
+      </div>
+      <div class="pass-wrap">
+        <input type="password" name="pass" class="pass input">
+        <span class="pass-text input-text">Password</span>
+      </div>
+
+      <button class="btn btn--form">Sign-in</button>
+      <button class="close" id="close__sign-in">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+    </form> <!-- ./form sign-in -->
+
+    <!-- form sign-up -->
+    <form class="form form--sign-up">
+      <div class="login-wrap">
+        <input type="text" name="login" class="login input">
+        <span class="login-text input-text">Login</span>
+      </div>
+      <div class="email-wrap">
+        <input type="email" name="email" class="email--form input">
+        <span class="email-text input-text">email</span>
+      </div>
+      <div class="pass-wrap">
+        <input type="password" name="pass" class="pass input">
+        <span class="pass-text input-text">Password</span>
+      </div>
+
+      <button class="btn btn--form">Sign-in</button>
+      <button class="close" id="close__sign-up">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+    </form> <!-- ./form sign-up -->
+
+    <!-- first section -->
+    <div class="first-section">
+
+      <!-- background slider -->
+      <div class="slider">
+        <ul class="slider__list"></ul>
+      </div> <!-- background slider -->
+
+      <!-- header -->
+      <header class="header">
+
+        <!-- logo header -->
+        <div class="logo">
+          <a href="#" class="logo__link">
+            <img src="img/Sign.png" alt="logo" class="logo__img">
+            <span class="logo__text">Westa Bank</span>
+          </a>
+        </div> <!-- ./logo header -->
+
+        <!-- phone header -->
+        <div class="phone">
+          <i class="fa fa-phone phone__icon" aria-hidden="true"></i>
+          <a href="tel:600300200" class="phone__link">600-300-200</a>
+        </div> <!-- ./phone header -->
+
+        <!-- navigation header -->
+        <nav class="nav">
+          <button class="nav__btn">
+            <i class="fa fa-bars nav__btn-icon" aria-hidden="true"></i>
+          </button>
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link nav__link--trs">Banking</a></li>
+            <li class="nav__item"><a href="#" class="nav__link nav__link--trs">Credit cards</a></li>
+            <li class="nav__item"><a href="#" class="nav__link nav__link--trs">Lending</a></li>
+            <li class="nav__item"><a href="#" class="nav__link nav__link--trs">Investing</a></li>
+            <li class="nav__item"><a href="#" class="nav__link nav__link--trs">Business</a></li>
+            <li class="nav__item"><a href="#" class="nav__link nav__link--trs">Services</a></li>
+            <li class="nav__item"><a href="#" class="nav__link nav__link--trs">Mobile App</a></li>
+            <li class="nav__item nav__item--log"><a href="#" class="nav__link nav__link--sign-in">Sign-in</a></li>
+            <li class="nav__item nav__item--log"><a href="#" class="nav__link nav__link--sign-up">Sign-up</a></li>
+          </ul>
+        </nav> <!-- ./navigation header -->
+
+        <!-- search header -->
+        <div class="search">
+          <input type="text" class="search__input">
+          <i class="fa fa-search search__icon" aria-hidden="true"></i>
+        </div> <!-- ./search header -->
+
+        <button class="btn btn--sign-in">
+          sign in
+        </button>
+
+        <button class="btn btn--sign-up">
+          sign up
+        </button>
+
+      </header> <!-- ./header -->
+
+      <!-- first-section block wrap -->
+      <div class="first-section__block-wrap">
+        <!-- first section block text -->
+        <div class="first-section__block-text">
+
+          <h2 class="first-section__block-title">
+            Open your <span>eWesta</span> account
+          </h2>
+
+          <p class="first-section__block-under-title">
+            Gain addidtional 100$ promotion for active usage your account
+          </p>
+
+          <button class="btn first-section__block-button">
+            learn more
+          </button>
+        </div> <!-- ./first section block text -->
+
+        <div class="first-section__block-count">
+          <!-- <img src="./img/Slider.png" alt="slider"> -->
+          <svg class="svg">
+            <linearGradient id="color">
+              <stop offset="0%" stop-color="#aae238"/>
+              <stop offset="100%" stop-color="#2bd39b"/>
+            </linearGradient>
+            <circle cx='75' cy='75' r='72' stroke='url(#color)' stroke-width='3' fill='none' />
+            <text text-anchor='middle' x='75' y='88'>
+
+            </text>
+          </svg>
+          <div class="first-section__count"></div>
+        </div>
+      </div> <!-- ./first-section block wrap -->
+
+
+    </div> <!-- ./first section -->
+
+    <!-- second section -->
+    <div class="second-section">
+
+      <!-- top cards -->
+      <div class="cards-top">
+        <div class="card-top">
+          <div class="card__header card__header--first">
+            <img src="img/Icon.png" alt="icon" class="card__header-img">
+            <h3 class="card__header-title">Westa support programm</h3>
+            <p class="card__header-under-title">Check how to get it now</p>
+            <button class="btn card__btn">start now</button>
+          </div>
+        </div>
+
+        <div class="card-top">
+          <div class="card__header card__header--second">
+            <img src="img/Icon.png" alt="icon" class="card__header-img">
+            <h3 class="card__header-title">Become client</h3>
+            <p class="card__header-under-title">Open your account and have more opportunities</p>
+            <button class="btn card__btn">start now</button>
+          </div>
+        </div>
+
+        <div class="card-top">
+          <div class="card__header card__header--third">
+            <img src="img/Icon.png" alt="icon" class="card__header-img">
+            <h3 class="card__header-title">Explore the way</h3>
+            <p class="card__header-under-title">How to easly save your money</p>
+            <button class="btn card__btn">start now</button>
+          </div>
+        </div>
+
+      </div> <!-- ./top cards -->
+
+      <div class="second-section__text">
+        Check our other products
+      </div>
+
+      <!-- bottom cards -->
+      <div class="cards-bottom">
+        <div class="card-bottom">
+          <div class="card__footer">
+            <img src="img/Icon-5.png" alt="icon" class="card__footer-img">
+            <h4 class="card__footer-title">Individual account</h4>
+            <p class="card__footer-under-title">simplicity and convenience in banking</p>
+            <a href="#" class="card__footer-link">Learn more</a>
+          </div>
+        </div><div class="card-bottom">
+          <div class="card__footer">
+            <img src="img/Icon-3.png" alt="icon" class="card__footer-img">
+            <h4 class="card__footer-title">Joint bank account</h4>
+            <p class="card__footer-under-title">Ideal when you want to share your account with another person</p>
+            <a href="#" class="card__footer-link">Learn more</a>
+          </div>
+        </div><div class="card-bottom">
+          <div class="card__footer">
+            <img src="img/Icon-4.png" alt="icon" class="card__footer-img">
+            <h4 class="card__footer-title">Corporate account</h4>
+            <p class="card__footer-under-title">Offer for anyone with small and large businesses</p>
+            <a href="#" class="card__footer-link">Learn more</a>
+          </div>
+        </div>
+      </div> <!-- ./bottom cards -->
+
+    </div> <!-- second section -->
+
+
+    <!-- third section -->
+    <div class="third-section">
+
+      <!-- third section navigation -->
+      <nav class="third-section-nav">
+        <ul class="third-section-nav__list">
+          <li class="third-section-nav__item"><a href="#" class="third-section-nav__link third-section-nav__link--active">Additional Informations</a></li>
+          <li class="third-section-nav__item"><a href="#" class="third-section-nav__link">Current exchange rates</a></li>
+          <li class="third-section-nav__item"><a href="#" class="third-section-nav__link">ATMs and institutions</a></li>
+          <li class="third-section-nav__item"><a href="#" class="third-section-nav__link">Protection</a></li>
+          <li class="third-section-nav__item"><a href="#" class="third-section-nav__link">Files to download</a></li>
+        </ul>
+      </nav> <!-- ./third section navigation -->
+
+      <!-- third section slider -->
+      <div class="third-section-slider">
+
+        <!-- slider left -->
+        <div class="slider-left">
+          <div class="slider-left__item">Insurance1</div>
+          <div class="slider-left__item">Insurance2</div>
+          <div class="slider-left__item">Insurance3</div>
+          <div class="slider-left__item">Insurance4</div>
+          <div class="slider-left__item">Insurance5</div>
+          <button class="slider-left__btn slider__btn"></button>
+        </div> <!-- ./slider left -->
+
+        <!-- slider right -->
+        <div class="slider-right">
+          <div class="slider-right__item">
+            <div class="slider-right__text-wrap">
+              <h4 class="slider-right__title">eWesta Start Account</h4>
+              <p class="slider-right__under-title">No money for companies operating more than 12 months 5</p>
+              <button class="btn btn--slider-right">see details</button>
+            </div>
+          </div>
+          <div class="slider-right__item">
+            <div class="slider-right__text-wrap">
+              <h4 class="slider-right__title">eWesta Start Account</h4>
+              <p class="slider-right__under-title">No money for companies operating more than 12 months 4</p>
+              <button class="btn btn--slider-right">see details</button>
+            </div>
+          </div>
+          <div class="slider-right__item">
+            <div class="slider-right__text-wrap">
+              <h4 class="slider-right__title">eWesta Start Account</h4>
+              <p class="slider-right__under-title">No money for companies operating more than 12 months 3</p>
+              <button class="btn btn--slider-right">see details</button>
+            </div>
+          </div>
+          <div class="slider-right__item">
+            <div class="slider-right__text-wrap">
+              <h4 class="slider-right__title">eWesta Start Account</h4>
+              <p class="slider-right__under-title">No money for companies operating more than 12 months 2</p>
+              <button class="btn btn--slider-right">see details</button>
+            </div>
+          </div>
+          <div class="slider-right__item">
+            <div class="slider-right__text-wrap">
+              <h4 class="slider-right__title">eWesta Start Account</h4>
+              <p class="slider-right__under-title">No money for companies operating more than 12 months 1</p>
+              <button class="btn btn--slider-right">see details</button>
+            </div>
+          </div>
+          <button class="slider-right__btn slider__btn"></button>
+        </div> <!-- ./slider right -->
+
+      </div> <!-- ./third section slider -->
+
+    </div> <!-- ./third section -->
+
+
+    <!-- fourth section -->
+    <div class="fourth-section">
+
+      <!-- constacts -->
+      <div class="contacts">
+
+        <!-- logo footer -->
+        <div class="logo logo--footer">
+          <a href="#" class="logo__link">
+            <img src="img/Sign.png" alt="logo" class="logo__img">
+            <span class="logo__text">Westa Bank</span>
+          </a>
+        </div> <!-- ./logo footer -->
+
+        <h4 class="contacts__title">
+          Contact
+        </h4>
+
+        <!-- wrap phone and email -->
+        <div class="contacts__wrap-phone-email">
+          <!-- phone footer -->
+          <div class="phone phone--footer">
+            <i class="fa fa-phone phone__icon icon__footer" aria-hidden="true"></i>
+            <a href="tel:600300200" class="phone__link phone__link--footer">600-300-200</a>
+          </div> <!-- ./phone footer -->
+
+          <!-- email footer -->
+          <div class="email">
+            <i class="fa fa-envelope-o icon__footer" aria-hidden="true"></i>
+            <a href="mailto:contact@westa.com" class="email__link">contact@westa.com</a>
+          </div> <!-- ./email footer -->
+
+        </div> <!-- ./wrap phone and email -->
+
+        <!-- social wrap -->
+        <div class="contacts__soc-wrap">
+          <a href='#' class="soc soc--fb">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href='#' class="soc soc--tw">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href='#' class="soc soc--in">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </div> <!-- ./social wrap -->
+
+      </div> <!-- ./constacts -->
+
+      <!-- about -->
+      <div class="about">
+
+        <div class="about__block">
+          <h4 class="about__title">Banking</h4>
+          <ul class="about__list">
+            <li class="about__item">Online Banking</li>
+            <li class="about__item">Mobile and Tablet Banking</li>
+            <li class="about__item">Mobile Check Deposit</li>
+            <li class="about__item">Account Alerts</li>
+            <li class="about__item">Online Bank Statements</li>
+            <li class="about__item">Online Bill Payments</li>
+            <li class="about__item">Debit Card</li>
+            <li class="about__item">Protect Your Money</li>
+            <li class="about__item">Transfers</li>
+          </ul>
+        </div>
+        <div class="about__block">
+          <h4 class="about__title">Credit cards</h4>
+          <ul class="about__list">
+            <li class="about__item">Business Credit Cards</li>
+            <li class="about__item">Student Credit Cards</li>
+            <li class="about__item">Secured Credit Card</li>
+            <li class="about__item">Travel Credit Cards</li>
+            <li class="about__item">Visa® Credit Cards</li>
+            <li class="about__item">MasterCard® Credit Cards</li>
+            <li class="about__item">Respond to a Mail Offer</li>
+            <li class="about__item">Services & Tools</li>
+            <li class="about__item">Mobile Banking</li>
+          </ul>
+        </div>
+        <div class="about__block">
+          <h4 class="about__title">Lending</h4>
+          <ul class="about__list">
+            <li class="about__item">Homeownership</li>
+            <li class="about__item">Buying a Home</li>
+            <li class="about__item">Refinance Your Home</li>
+            <li class="about__item">Use Your Home Equity</li>
+            <li class="about__item">Homeowner Support</li>
+            <li class="about__item">Mortgage Application Status</li>
+            <li class="about__item">Calculators & Tools</li>
+            <li class="about__item">Mortgage Rate Selector</li>
+          </ul>
+        </div>
+        <div class="about__block">
+          <h4 class="about__title">Investing</h4>
+          <ul class="about__list">
+            <li class="about__item">Annuities</li>
+            <li class="about__item">Advisory Accounts</li>
+            <li class="about__item">Bonds</li>
+            <li class="about__item">Insurance</li>
+            <li class="about__item">IRAs and Rollovers</li>
+            <li class="about__item">Mutual Funds</li>
+            <li class="about__item">Securities Backed Lending</li>
+            <li class="about__item">Planning Resources</li>
+            <li class="about__item">Financial Planning Tools</li>
+            <li class="about__item">Link Your Account</li>
+          </ul>
+        </div>
+        <div class="about__block">
+          <h4 class="about__title">Business</h4>
+          <ul class="about__list">
+            <li class="about__item">Small Business Banking</li>
+            <li class="about__item">Solutions by Business Need</li>
+            <li class="about__item">Solutions by Industry</li>
+            <li class="about__item">Products & Services</li>
+            <li class="about__item">Online Banking Solutions</li>
+            <li class="about__item">Small Business Resources</li>
+            <li class="about__item">Business Banking</li>
+            <li class="about__item">Product Solutions</li>
+          </ul>
+        </div>
+
+      </div> <!-- about -->
+
+    </div> <!-- ./fourth section -->
+
+  </div> <!-- ./wrapper -->
+
+  <script src="js/main.prod.js"></script>
+</body>
+</html>
