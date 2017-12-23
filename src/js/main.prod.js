@@ -64,7 +64,7 @@ var SliderTop = function () {
     this._count();
 
     // Запускаем прогресс бар разбитый на 300 частей
-    // this._progress(60);
+    this._progress(120);
 
     //  Запускаем бэкграунд слайдер
     this._slideInterval();
@@ -91,31 +91,41 @@ var SliderTop = function () {
     }
 
     //  функция заполнение круга прогресс бара
-    // _progress(parts) {
-    //   this.line.setAttribute('stroke-dashoffset', `${this.lineLength / 4}`);
-    //   for(let i = 0; i <= parts; i++) {
-    //     setTimeout(() => {
-    //       this.line.setAttribute('stroke-dasharray', `${this.lineLength / parts * i} ${this.lineLength - this.lineLength / parts * i}`);
-    //     }, this.timeChangeBackground / parts * i);
-    //   }
-    // }
+
+  }, {
+    key: '_progress',
+    value: function _progress(parts) {
+      var _this = this;
+
+      this.line.setAttribute('stroke-dashoffset', '' + this.lineLength / 4);
+
+      var _loop = function _loop(i) {
+        setTimeout(function () {
+          _this.line.setAttribute('stroke-dasharray', _this.lineLength / parts * i + ' ' + (_this.lineLength - _this.lineLength / parts * i));
+        }, _this.timeChangeBackground / parts * i);
+      };
+
+      for (var i = 0; i <= parts; i++) {
+        _loop(i);
+      }
+    }
 
     //  Интервал вывода счетчика на страницу
 
   }, {
     key: '_slideInterval',
     value: function _slideInterval(sec) {
-      var _this = this;
+      var _this2 = this;
 
       setInterval(function () {
-        // this._progress(60);
-        _this.sliderItem[_this.count % _this.sliderItem.length].style.opacity = '0';
+        _this2._progress(120);
+        _this2.sliderItem[_this2.count % _this2.sliderItem.length].style.opacity = '0';
 
-        _this.count++;
+        _this2.count++;
 
-        _this.sliderItem[_this.count % _this.sliderItem.length].style.opacity = '1';
+        _this2.sliderItem[_this2.count % _this2.sliderItem.length].style.opacity = '1';
 
-        _this._count();
+        _this2._count();
       }, this.timeChangeBackground);
     }
   }]);
@@ -138,31 +148,31 @@ var BtnSearch = function () {
   _createClass(BtnSearch, [{
     key: '_events',
     value: function _events() {
-      var _this2 = this;
+      var _this3 = this;
 
       //  show search input
       this.btnSearch.addEventListener('click', function () {
-        _this2.inputSearch.classList.toggle('search__input--show');
-        _this2.inputSearch.focus();
+        _this3.inputSearch.classList.toggle('search__input--show');
+        _this3.inputSearch.focus();
       });
 
       //  usage search input
       this.inputSearch.addEventListener('keydown', function (e) {
         if (e.keyCode === 13) {
-          _this2.inputSearch.classList.toggle('search__input--show');
-          alert(_this2.inputSearch.value);
-          _this2.inputSearch.value = '';
+          _this3.inputSearch.classList.toggle('search__input--show');
+          alert(_this3.inputSearch.value);
+          _this3.inputSearch.value = '';
         } else if (e.keyCode === 27) {
-          _this2.inputSearch.classList.toggle('search__input--show');
-          _this2.inputSearch.value = '';
+          _this3.inputSearch.classList.toggle('search__input--show');
+          _this3.inputSearch.value = '';
         } else if (!e.target) {
-          _this2.inputSearch.classList.toggle('search__input--show');
+          _this3.inputSearch.classList.toggle('search__input--show');
         }
       });
 
       document.body.addEventListener('click', function (e) {
-        if (e.target !== _this2.inputSearch && e.target !== _this2.btnSearch && _this2.inputSearch.classList.contains('search__input--show')) {
-          _this2.inputSearch.classList.remove('search__input--show');
+        if (e.target !== _this3.inputSearch && e.target !== _this3.btnSearch && _this3.inputSearch.classList.contains('search__input--show')) {
+          _this3.inputSearch.classList.remove('search__input--show');
         }
       });
     }
@@ -187,28 +197,28 @@ var Menu = function () {
   _createClass(Menu, [{
     key: '_events',
     value: function _events() {
-      var _this3 = this;
+      var _this4 = this;
 
       // Открытие меню по клику на кнопку меню
       this.menuBtn.addEventListener('click', function () {
-        _this3.menuList.classList.add('nav__list--show');
-        _this3.overlay.classList.add('overlay--show');
+        _this4.menuList.classList.add('nav__list--show');
+        _this4.overlay.classList.add('overlay--show');
       });
 
       // Скрытие меню и оверфлоу по клику на оверфлоу
       this.overlay.addEventListener('click', function () {
-        _this3.menuList.classList.remove('nav__list--show');
-        _this3.overlay.classList.remove('overlay--show');
+        _this4.menuList.classList.remove('nav__list--show');
+        _this4.overlay.classList.remove('overlay--show');
       });
 
       // Скрытие меню и оверфлоу по клику на пункт меню
       this.menuList.addEventListener('click', function (e) {
         if (e.target.tagName === 'A' && e.target.classList.contains('nav__link--trs')) {
-          _this3.menuList.classList.remove('nav__list--show');
-          _this3.overlay.classList.remove('overlay--show');
+          _this4.menuList.classList.remove('nav__list--show');
+          _this4.overlay.classList.remove('overlay--show');
         };
         if (e.target.tagName === 'A' && (e.target.classList.contains('nav__link--sign-in') || e.target.classList.contains('nav__link--sign-up'))) {
-          _this3.menuList.classList.remove('nav__list--show');
+          _this4.menuList.classList.remove('nav__list--show');
         };
       });
     }
@@ -256,21 +266,21 @@ var SliderSecond = function () {
   }, {
     key: '_events',
     value: function _events() {
-      var _this4 = this;
+      var _this5 = this;
 
       //  Перемещение слайда по клику вперед
       this.btnNext.addEventListener('click', function () {
-        if (_this4.count < _this4.leftSliderItem.length - 1) {
-          _this4.count++;
-          _this4._toggleSlider();
+        if (_this5.count < _this5.leftSliderItem.length - 1) {
+          _this5.count++;
+          _this5._toggleSlider();
         }
       });
 
       //  Перемещение слайда по клику назад
       this.btnPrev.addEventListener('click', function () {
-        if (_this4.count > 0) {
-          _this4.count--;
-          _this4._toggleSlider();
+        if (_this5.count > 0) {
+          _this5.count--;
+          _this5._toggleSlider();
         }
       });
 
@@ -278,10 +288,10 @@ var SliderSecond = function () {
       this.navList.addEventListener('click', function (e) {
         if (e.target.tagName === 'A') {
           event.preventDefault();
-          for (var i = 0; i < _this4.navItem.length; i++) {
-            if (e.target.parentNode === _this4.navItem[i]) {
-              _this4.count = i;
-              _this4._toggleSlider();
+          for (var i = 0; i < _this5.navItem.length; i++) {
+            if (e.target.parentNode === _this5.navItem[i]) {
+              _this5.count = i;
+              _this5._toggleSlider();
             }
           }
         }
@@ -312,53 +322,53 @@ var Form = function () {
   _createClass(Form, [{
     key: '_events',
     value: function _events() {
-      var _this5 = this;
+      var _this6 = this;
 
       this.btnSignIn.addEventListener('click', function () {
-        _this5.formSignIn.classList.add('form--sign-in-show');
-        _this5.overlay.classList.add('overlay--show');
+        _this6.formSignIn.classList.add('form--sign-in-show');
+        _this6.overlay.classList.add('overlay--show');
       });
 
       this.navLinkSignIn.addEventListener('click', function () {
-        _this5.formSignIn.classList.add('form--sign-in-show');
-        _this5.overlay.classList.add('overlay--show');
+        _this6.formSignIn.classList.add('form--sign-in-show');
+        _this6.overlay.classList.add('overlay--show');
       });
 
       this.btnSignUp.addEventListener('click', function () {
-        _this5.formSignUp.classList.add('form--sign-up-show');
-        _this5.overlay.classList.add('overlay--show');
+        _this6.formSignUp.classList.add('form--sign-up-show');
+        _this6.overlay.classList.add('overlay--show');
       });
 
       this.navLinkSignUp.addEventListener('click', function () {
-        _this5.formSignUp.classList.add('form--sign-up-show');
-        _this5.overlay.classList.add('overlay--show');
+        _this6.formSignUp.classList.add('form--sign-up-show');
+        _this6.overlay.classList.add('overlay--show');
       });
 
       this.overlay.addEventListener('click', function () {
-        if (_this5.formSignIn.classList.contains('form--sign-in-show')) {
-          _this5.formSignIn.classList.remove('form--sign-in-show');
+        if (_this6.formSignIn.classList.contains('form--sign-in-show')) {
+          _this6.formSignIn.classList.remove('form--sign-in-show');
         };
-        if (_this5.formSignUp.classList.contains('form--sign-up-show')) {
-          _this5.formSignUp.classList.remove('form--sign-up-show');
+        if (_this6.formSignUp.classList.contains('form--sign-up-show')) {
+          _this6.formSignUp.classList.remove('form--sign-up-show');
         };
       });
 
-      var _loop = function _loop(i) {
+      var _loop2 = function _loop2(i) {
         //  Если поле в фокусе, плейсхолдер уходит вверх
-        _this5.input[i].addEventListener('focus', function () {
-          _this5.inputText[i].classList.add('login-text--full');
+        _this6.input[i].addEventListener('focus', function () {
+          _this6.inputText[i].classList.add('login-text--full');
         });
 
         //  Если поле пустое, плейсхолдер возвращается обратно
-        _this5.input[i].addEventListener('blur', function () {
-          if (_this5.input[i].value === "") {
-            _this5.inputText[i].classList.remove('login-text--full');
+        _this6.input[i].addEventListener('blur', function () {
+          if (_this6.input[i].value === "") {
+            _this6.inputText[i].classList.remove('login-text--full');
           }
         });
       };
 
       for (var i = 0; i < this.input.length; i++) {
-        _loop(i);
+        _loop2(i);
       }
     }
   }]);

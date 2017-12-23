@@ -7,7 +7,7 @@
   height: 100%;
   z-index: 9999;
   background: linear-gradient(to right,#aae238,#2bd39b);
-  transition: .5s;
+  transition: 1s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,6 +15,7 @@
 
 .preloader--hide {
   transform: translateY(-100%);
+  opacity: 0;
 }
 
 .preloader__anim {
