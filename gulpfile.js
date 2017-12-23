@@ -9,6 +9,7 @@ const babelify = require('babelify');
 const browserify = require('gulp-browserify');
 const watch = require('gulp-watch');
 const babel = require('gulp-babel');
+const uglify = require('gulp-uglifyjs');
 
 gulp.task('browser-sync', () => {
   browserSync.init({
@@ -43,6 +44,7 @@ gulp.task('js', () => {
     .pipe(babel({
       presets: ['env']
     }))
+    .pipe(uglify())
     .pipe(rename({
       suffix: ".prod"
     }))
@@ -53,7 +55,7 @@ gulp.task('js', () => {
 gulp.task('watch', ['browser-sync'], () => {
   gulp.watch('src/sass/**/*.scss', ['css']);
   gulp.watch('src/index.html').on('change', browserSync.reload);
-  gulp.watch('src/js/**/*.js', ['js']);
+  gulp.watch(['src/js/**/*.js', '!src/js/main.prod.js'], ['js']);
 })
 
 gulp.task('default', ['watch']);

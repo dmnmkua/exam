@@ -5,7 +5,7 @@ window.addEventListener('load', preloader);
 // Preloader
 function preloader() {
   const preloader = document.querySelector('.preloader');
-  
+
   preloader.classList.add('preloader--hide');
 }
 
@@ -44,13 +44,13 @@ class SliderTop {
       'img/Photo-2.png',
       'img/Photo-3.png',
       'img/Photo-4.jpg',
-    ];    
+    ];
 
     //  Переменные svg
     this.line = document.querySelector('.svg circle');
     this.text = document.querySelector('.svg text');
     this.radius = this.line.getAttribute('r');
-    this.lineLength = 2 * this.radius * Math.PI;    
+    this.lineLength = 2 * this.radius * Math.PI;
 
     //  Создаем динамически элементы списка (слайдера)
     this._createElementsSlider();
@@ -70,7 +70,7 @@ class SliderTop {
     //  Запускаем бэкграунд слайдер
     this._slideInterval();
   }
-  
+
   _createElementsSlider() {
     for(let i = 0; i < this.imgArr.length; i++) {
       this.sliderItemCr = document.createElement('li');
@@ -80,12 +80,12 @@ class SliderTop {
       this.sliderList.appendChild(this.sliderItemCr);
     };
   };
-  
+
 
   //  функция вывода счетчика на страницу
   _count() {
     this.text.innerHTML = (`<tspan>${(this.count % this.sliderItem.length) + 1}</tspan>/${this.sliderItem.length}`);
-  }  
+  }
 
   //  функция заполнение круга прогресс бара
   _progress(parts) {
@@ -199,14 +199,14 @@ class Menu {
 class SliderSecond {
 
   constructor() {
-    // values 
+    // values
     this.btnPrev = document.querySelector('.slider-left__btn');
     this.btnNext = document.querySelector('.slider-right__btn');
     this.leftSliderItem = document.querySelectorAll('.slider-left__item');
     this.rightSliderItem = document.querySelectorAll('.slider-right__item');
     this.navList = document.querySelector('.third-section-nav__list');
     this.navItem = document.querySelectorAll('.third-section-nav__item');
-    this.count = 0;      
+    this.count = 0;
 
     //  Запускаем функцию слайдера
     this._toggleSlider();
@@ -214,7 +214,7 @@ class SliderSecond {
     //  События
     this._events();
   }
-  
+
 
   _toggleSlider() {
     //  Удаляем активный класс у всех ссылок
@@ -279,17 +279,17 @@ class Form {
     this._events();
   }
 
-  
+
   _events() {
       this.btnSignIn.addEventListener('click', () => {
         this.formSignIn.classList.add('form--sign-in-show');
         this.overlay.classList.add('overlay--show');
-      }); 
+      });
 
       this.navLinkSignIn.addEventListener('click', () => {
         this.formSignIn.classList.add('form--sign-in-show');
         this.overlay.classList.add('overlay--show');
-      });   
+      });
 
       this.btnSignUp.addEventListener('click', () => {
         this.formSignUp.classList.add('form--sign-up-show');
@@ -322,12 +322,9 @@ class Form {
         if(this.input[i].value === "") {
           this.inputText[i].classList.remove('login-text--full');
         }
-      }); 
+      });
 
     }
-    
+
   }
 }
-
-
-
