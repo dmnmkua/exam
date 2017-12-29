@@ -8,6 +8,7 @@
   z-index: 9999;
   background: linear-gradient(to right,#aae238,#2bd39b);
   transition: 1s;
+  will-change: transform, opacity;
   display: flex;
   align-items: center;
   justify-content: center;

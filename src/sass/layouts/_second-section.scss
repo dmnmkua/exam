@@ -74,7 +74,7 @@
   border-image: linear-gradient(to right, #aae238 , #2bd39b) 1 100%;
   border-image-slice: 1;
   transition: .3s linear, background 0s;
-  will-change: padding;
+  will-change: transform, border-image, background;
   position: absolute;
   top: -125px;
   left: 0;
@@ -137,6 +137,7 @@
   margin: 0;
   height: 0;
   transition: .3s;
+  will-change: height, opacity, margin-bottom;
   opacity: 0;
 
   @media screen and (max-width: 1000px) {
@@ -245,6 +246,7 @@
   bottom: 0;
   left: 0;
   transition: .3s;
+  will-change: box-shadow, transform;
 
   @media screen and (max-width: 1700px) {
     padding: 50px 80px;
@@ -299,6 +301,7 @@
 .card__footer-link {
   opacity: 0;
   transition: .3s linear;
+  will-change: border-bottom;
   font-family: 'Proxima Nova Regular', sans-serif;
   font-weight: 400;
   color: #2cd39a;

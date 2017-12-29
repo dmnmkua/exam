@@ -168,6 +168,7 @@
 	cursor: pointer;
 	text-decoration: none;
 	transition: .3s;
+	will-change: opacity;
 
 	&:hover {
 		opacity: .8;
@@ -202,7 +203,7 @@
 	}
 
 	@media screen and (max-width: 900px) {
-		flex-wrap: wrap; 
+		flex-wrap: wrap;
 		justify-content: flex-start;
 	}
 }
@@ -216,7 +217,7 @@
 }
 
 .about__block {
-	
+
 	@media screen and (max-width: 900px) {
 		width: 33%;
 		margin-bottom: 30px;
@@ -273,6 +274,7 @@
 	font-weight: 400;
 	cursor: pointer;
 	transition: .3;
+	will-change: text-decoration;
 
 	&:hover {
 		text-decoration: underline;

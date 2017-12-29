@@ -24,7 +24,7 @@
   }
 
   @media screen and (max-width: 768px) {
-    
+
   }
 }
 
@@ -115,6 +115,7 @@
     bottom: -5px;
     left: 50%;
     transition: .3s;
+    will-change: width;
   }
 
   &:after {
@@ -126,6 +127,7 @@
     bottom: -5px;
     right: 50%;
     transition: .3s;
+    will-change: width;
   }
 
   &:hover {

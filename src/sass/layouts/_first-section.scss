@@ -54,7 +54,7 @@
   height: 100%;
   position: absolute;
   transition: 1s;
-  will-change: transform;
+  will-change: transform, opacity;
   opacity: 0;
 }
 

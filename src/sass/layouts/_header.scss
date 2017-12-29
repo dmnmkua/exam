@@ -112,6 +112,7 @@
 .search__input {
   width: 0;
   transition: .3s;
+  will-change: width, opacity, padding;
   padding: 10px 0;
   border-radius: 26px;
   opacity: 0;
@@ -134,6 +135,7 @@
 .search__icon {
   cursor: pointer;
   transition: .3s;
+  will-change: color;
 
   &:hover {
     color: #2cd39a;

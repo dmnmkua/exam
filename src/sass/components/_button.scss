@@ -24,6 +24,7 @@
     width: 100%;
     height: 100%;
     transition: .3s;
+    will-change: box-shadow;
     z-index: -5;
   }
 
