@@ -12,13 +12,13 @@ export default class SliderTop {
       'img/Photo-2.png',
       'img/Photo-3.png',
       'img/Photo-4.jpg',
-    ];    
+    ];
 
     //  Переменные svg
     this.line = document.querySelector('.svg circle');
     this.text = document.querySelector('.svg text');
     this.radius = this.line.getAttribute('r');
-    this.lineLength = 2 * this.radius * Math.PI;    
+    this.lineLength = 2 * this.radius * Math.PI;
 
     //  Создаем динамически элементы списка (слайдера)
     this._createElementsSlider();
@@ -33,12 +33,12 @@ export default class SliderTop {
     this._count();
 
     // Запускаем прогресс бар разбитый на 300 частей
-    this._progress(300);
+    this._progress(180);
 
     //  Запускаем бэкграунд слайдер
     this._slideInterval();
   }
-  
+
   _createElementsSlider() {
     for(let i = 0; i < this.imgArr.length; i++) {
       this.sliderItemCr = document.createElement('li');
@@ -52,7 +52,7 @@ export default class SliderTop {
   //  функция вывода счетчика на страницу
   _count() {
     this.text.innerHTML = (`<tspan>${(this.count % this.sliderItem.length) + 1}</tspan>/${this.sliderItem.length}`);
-  }  
+  }
 
   //  функция заполнение круга прогресс бара
   _progress(parts) {
@@ -67,7 +67,7 @@ export default class SliderTop {
   //  Интервал вывода счетчика на страницу
   _slideInterval(sec) {
     setInterval( () => {
-      this._progress(300);
+      this._progress(180);
       this.sliderItem[this.count % this.sliderItem.length].style.opacity = `0`;
 
       this.count++;

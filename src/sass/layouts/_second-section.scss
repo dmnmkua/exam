@@ -27,6 +27,18 @@
 //     width: 100%;
 //   }
 // }
+.wrapper-cards-top {
+  width: 100%;
+
+  @media screen and (max-width: 1000px) {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow-x: hidden;
+    margin-bottom: 100px;
+  }
+}
+
 
 
 .cards-top {
@@ -39,9 +51,48 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: relative;
+  transition: .3s;
+  transform: translateX(0);
 
   @media screen and (max-width: 1000px) {
-    flex-direction: column;
+    // flex-direction: column;
+    justify-content: flex-start;
+    transform: translateX(0);
+  }
+}
+
+.btn-control {
+  display: none;
+
+  @media screen and (max-width: 1000px) {
+    position: absolute;
+    height: 30%;
+    width: 50px;
+    background: rgba(0, 0, 0, .3);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    border: none;
+    cursor: pointer;
+    display: block;
+  }
+}
+
+.btn-control--left {
+  left: 0;
+}
+
+.btn-control--right {
+  right: 0;
+}
+
+.btn-control i {
+  display: none;
+  @media screen and (max-width: 1000px) {
+    color: #fff;
+    font-size: 2rem;
+    display: block;
   }
 }
 
@@ -56,7 +107,8 @@
 
   @media screen and (max-width: 1000px) {
     width: 100%;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
+    flex-shrink: 0;
   }
 }
 
@@ -202,6 +254,17 @@
   box-shadow: inset 0 0 0 1px rgba(44, 211, 154, .3);
 }
 
+.wrapper-cards-bottom {
+  width: 100%;
+
+  @media screen and (max-width: 1000px) {
+    position: relative;
+    width: 100%;
+    height: 370px;
+    overflow-x: hidden;
+  }
+}
+
 .cards-bottom {
   margin: 0 auto;
   display: -webkit-flex;
@@ -213,7 +276,9 @@
   width: 100%;
 
   @media screen and (max-width: 1000px) {
-    flex-direction: column;
+    // flex-direction: column;
+    justify-content: flex-start;
+    transition: .3s;
   }
 }
 
@@ -227,7 +292,8 @@
 
   @media screen and (max-width: 1000px) {
     width: 100%;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
+    flex-shrink: 0;
   }
 }
 
@@ -339,6 +405,7 @@
   transition: .3s;
 
   @media screen and (max-width: 1000px) {
-    display: none;
+    // display: none;
+    top: 40%;
   }
 }
