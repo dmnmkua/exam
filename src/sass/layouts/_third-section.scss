@@ -286,6 +286,10 @@
   will-change: transform;
   background: linear-gradient(to right, #aae238 , #2bd39b);
   padding: 0 50px;
+
+  @media screen and (max-width: 400px) {
+    padding: 0 30px;
+  }
 }
 
 .slider-right__text-wrap {
@@ -295,6 +299,10 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  @media screen and (max-width: 1000px) {
+    align-items: center;
+  }
 }
 
 .slider-right__title {

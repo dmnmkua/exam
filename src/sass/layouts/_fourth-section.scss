@@ -212,22 +212,13 @@
 	padding-right: 20px;
 
 	@media screen and (max-width: 1200px) {
-		margin-right: 0;
+		padding-right: 0;
 	}
 }
 
 .about__block {
 
-	@media screen and (max-width: 900px) {
-		width: 33%;
-		margin-bottom: 30px;
-	}
-
-	@media screen and (max-width: 650px) {
-		width: 50%;
-	}
-
-	@media screen and (max-width: 400px) {
+	@media screen and (max-width: 1000px) {
 		width: 100%;
 	}
 }
@@ -239,20 +230,23 @@
 	font-size: 1.5rem;
 	position: relative;
 	margin: 0;
+	margin-top: 20px;
 	margin-bottom: 76px;
 
 	&:before {
 		content: '';
 		position: absolute;
 		width: 50%;
-		left: 0;
+		left: 25%;
 		bottom: -35px;
 		height: 2px;
 		background: #e8edee;
 	}
 
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 1000px) {
 		margin-bottom: 40px;
+		text-align: center;
+		cursor: pointer;
 	}
 
 	&:before {
@@ -265,6 +259,20 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	transition: max-height 1s;
+	will-change: height;
+
+	@media screen and (max-width: 1000px) {
+		overflow: hidden;
+		height: 0;
+	}
+}
+
+.about__list--show {
+
+	@media screen and (max-width: 1000px) {
+		height: auto;
+	}
 }
 
 .about__item {
@@ -273,14 +281,31 @@
 	font-family: 'Proxima Nova Regular', sans-serif;
 	font-weight: 400;
 	cursor: pointer;
-	transition: .3;
-	will-change: text-decoration;
+	transition: .5s;
+	will-change: text-decoration, font-size, opacity;
 
 	&:hover {
 		text-decoration: underline;
+	}
+
+	@media screen and (max-width: 1000px) {
+		opacity: 0;
+		text-align: center;
+	}
+}
+
+.about__list--show .about__item {
+	@media screen and (max-width: 1000px) {
+		opacity: 1;
 	}
 }
 
 .about__item:not(:last-child) {
 	margin-bottom: 15px;
+}
+
+.about__list--show .about__item:not(:last-child) {
+	@media screen and (max-width: 1000px) {
+		margin-bottom: 15px;
+	}
 }

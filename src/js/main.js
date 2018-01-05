@@ -17,6 +17,7 @@ import Menu from './components/menu';
 import SliderSecond from './components/secondSlider';
 import SliderTop from './components/sliderBg';
 import CardsSlider from './components/cardsSlider';
+import Accordion from './components/accordion';
 
 //  Main function
 function init() {
@@ -37,4 +38,5 @@ function init() {
   const sliderTop = new SliderTop;
   const topCardsSlider = new CardsSlider(tBtnLeft, tBtnRight, tCardSlider, tCardsSlider);
   const bottomCardsSlider = new CardsSlider(bBtnLeft, bBtnRight, bCardSlider, bCardsSlider);
+  const accordion = new Accordion;
 }
