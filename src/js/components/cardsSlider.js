@@ -39,17 +39,23 @@ export default class CardsSlider {
   }
 
   _btnHide() {
-    if(this.countSlider === 0) {
+    if(document.documentElement.clientWidth < 1000) {
+      if(this.countSlider === 0) {
+        this.btnLeft.style.display = 'none';
+      }
+      else {
+        this.btnLeft.style.display = 'block';
+      }
+      if(this.countSlider === this.cardSlider.length - 1) {
+        this.btnRight.style.display = 'none';
+      }
+      else {
+        this.btnRight.style.display = 'block';
+      }
+    }
+    else {
       this.btnLeft.style.display = 'none';
-    }
-    else {
-      this.btnLeft.style.display = 'block';
-    }
-    if(this.countSlider === this.cardSlider.length - 1) {
       this.btnRight.style.display = 'none';
-    }
-    else {
-      this.btnRight.style.display = 'block';
     }
   }
 }
