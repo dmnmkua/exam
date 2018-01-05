@@ -202,7 +202,7 @@
 		margin-bottom: 50px;
 	}
 
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 1000px) {
 		flex-wrap: wrap;
 		justify-content: flex-start;
 	}
@@ -237,7 +237,7 @@
 		content: '';
 		position: absolute;
 		width: 50%;
-		left: 25%;
+		left: 0;
 		bottom: -35px;
 		height: 2px;
 		background: #e8edee;
@@ -247,12 +247,15 @@
 		margin-bottom: 40px;
 		text-align: center;
 		cursor: pointer;
+
+		&:before {
+			content: '';
+			bottom: -20px;
+			left: 25%;
+		}
 	}
 
-	&:before {
-		content: '';
-		bottom: -20px;
-	}
+
 }
 
 .about__list {

@@ -6,8 +6,8 @@ export default class CardsSlider {
     this.cardsSlider = cardsSlider;
     this.countSlider = 0;
 
-    this._events();
     this._btnHide();
+    this._events();
   }
 
   _events() {
@@ -29,6 +29,7 @@ export default class CardsSlider {
       if(document.documentElement.clientWidth > 1000) {
         this.cardsSlider.style.transform = `translateX(0)`;
         this.btnLeft.style.display = 'none';
+        this.btnRight.style.display = 'none';
       }
       else {
         this.cardsSlider.style.transform = `translateX(-${this.countSlider * 100}%)`;
